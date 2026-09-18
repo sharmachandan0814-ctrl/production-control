@@ -34,7 +34,7 @@ export function JobsToolbar({
             onChange={(e) => onSearchChange(e.target.value)}
           />
         </div>
-        <Select value={statusFilter} onValueChange={(value) => onStatusFilterChange(value)}>
+     <Select value={statusFilter} onValueChange={(value) => value && onStatusFilterChange(value)}>
           <SelectTrigger className="w-full sm:w-[180px] bg-slate-50 border-slate-200 focus:ring-indigo-500">
             <SelectValue placeholder="All Statuses" />
           </SelectTrigger>

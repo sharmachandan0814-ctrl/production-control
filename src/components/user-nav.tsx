@@ -13,19 +13,22 @@ import { User, Settings, LogOut, CreditCard } from "lucide-react";
 export function UserNav() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <button className="flex items-center gap-2 outline-none">
-          <div className="h-8 w-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold text-sm">
-            A
-          </div>
-          <span className="text-sm font-medium text-slate-700 hidden sm:block">Admin User</span>
-        </button>
+      {/* Base UI trigger renders a <button> by default, so no asChild needed */}
+      <DropdownMenuTrigger className="flex items-center gap-2 outline-none focus:outline-none cursor-pointer">
+        <div className="h-8 w-8 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold text-sm">
+          A
+        </div>
+        <span className="text-sm font-medium text-slate-700 hidden sm:block">
+          Admin User
+        </span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
         <DropdownMenuLabel>
           <div className="flex flex-col space-y-1">
             <p className="text-sm font-medium leading-none">Admin User</p>
-            <p className="text-xs leading-none text-muted-foreground">admin@factoryos.com</p>
+            <p className="text-xs leading-none text-muted-foreground">
+              admin@factoryos.com
+            </p>
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
